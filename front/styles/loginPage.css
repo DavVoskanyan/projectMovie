@@ -1,0 +1,100 @@
+.formContainer {
+    width: 30%;
+    height: 60vh;
+    margin-top: 45vh;
+    transform: translateY(-50%);
+    background: #2e2e2e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+#signUpForm,
+#logInForm {
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#signUpForm.hidden,
+#logInForm.hidden { display: none; }
+
+
+.signUpAndLogIn {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.formTitle {
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.formTitle:nth-child(1) {
+    border-radius: 10px 0;
+}
+.formTitle:nth-child(2) {
+    border-radius: 0 10px;
+}
+.formTitle {
+    background: #2e2e2e;
+    color: #ffffff;
+    font-size: 15px;
+    font-style: italic;
+    cursor: pointer;
+    transition-duration: 120ms;
+}
+.formTitle:hover { background: #b64300; }
+.formTitle.active {
+    background: #ff6600;
+    color: #ffffff;
+}
+
+
+
+form > label {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 100;
+}
+form > input {
+    width: calc(50% - 5px);
+    height: 20px;
+    padding-left: 5px;
+    background: #3e3e3e;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    transition-duration: 200ms;
+    color: #ffffff;
+}
+form > input:hover,
+form > input:focus {
+    outline: none;
+    border: 2px solid #ff6600;
+}
+#logInForm { align-items: flex-end; }
+#logInForm label { width: calc(50% + 5px); }
+
+
+
+
+form > button {
+    width: 30%;
+    height: 50px;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 10px;
+    color: #ffffff;
+    background: #ff6600;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    transition-duration: 120ms;
+}
+form > button:hover { background: #b64300; }

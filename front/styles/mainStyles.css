@@ -1,19 +1,21 @@
+* { font-family: 'Roboto', sans-serif; }
+
 body {
     margin: 0;
     padding: 0;
-    background: #2e2e2e;
 }
 header {
     width: 100%;
     height: 50px;
     padding: 5px 10px;
+    background: #2e2e2e;
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(46, 46, 46, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10;
 }
 header > img {
     height: calc(100% - 10px);
@@ -28,13 +30,14 @@ header > img {
     height: 100%;
     padding: 0 25px;
     color: #ffffff;
+    border-bottom: 0;
     font-size: 20px;
-    line-height: 20px;
-    font-family: 'Roboto', sans-serif;
+    line-height: 50px;
     cursor: pointer;
     transition-duration: 120ms;
 }
-.stepButton:hover { background: #525252; }
+.stepButton:first-child{ border-bottom: 3px solid #ff6600; }
+.stepButton:hover { border-bottom: 3px solid #ff6600; }
 
 
 
@@ -43,7 +46,15 @@ header > img {
 
 div.mainContent {
     width: 100%;
+    min-height: calc(100vh - 50px);
+    margin-top: 50px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/front/assets/cinemaLogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 footer {
     width: 100%;

@@ -15,7 +15,7 @@
 </head>
 <body>
 <header>
-    <img src="/front/assets/kinoParkLogo.png" alt="">
+    <img src="/front/assets/cinemaLogo.png" alt="">
     <div class="menu">
         <div class="stepButton">1 Step</div>
         <div class="stepButton">2 Step</div>
@@ -23,10 +23,48 @@
     </div>
 </header>
 <div class="mainContent">
+    <div class="formContainer">
 
+        <div class="signUpAndLogIn">
+            <span class="formTitle active">Sign Up</span>
+            <span class="formTitle">Log In</span>
+        </div>
+
+        <form id="signUpForm" action="">
+
+            <label for="nameSignUp">Full Name</label>
+            <input type="text" id="nameSignUp">
+
+            <label for="mailSignUp">Mail</label>
+            <input type="email" id="mailSignUp" >
+
+            <label for="passwordSignUp">Password</label>
+            <input type="password" id="passwordSignUp" >
+
+            <label for="repeatSignUp">Password Repeat</label>
+            <input type="password" id="repeatSignUp" >
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <form id="logInForm" class="hidden" action="">
+
+            <label for="userMail">Mail</label>
+            <input type="email" id="userMail" >
+
+            <label for="userPassword">Password</label>
+            <input type="text" id="userPassword" >
+
+            <button type="submit">Log In</button>
+        </form>
+    </div>
 </div>
 <footer>
 
 </footer>
+
+
+
+<script type="application/javascript" src="/front/scripts/logInAndSignUp.js"></script>
 </body>
 </html>
