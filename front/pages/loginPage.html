@@ -34,15 +34,20 @@
 
             <label for="nameSignUp">Full Name</label>
             <input type="text" id="nameSignUp">
+            <span class="nameValid"></span>
 
             <label for="mailSignUp">Mail</label>
-            <input type="email" id="mailSignUp" >
+            <input type="email" id="mailSignUp">
+            <span class="mailValid"></span>
 
             <label for="passwordSignUp">Password</label>
-            <input type="password" id="passwordSignUp" >
+            <input type="password" id="passwordSignUp">
+            <span class="passwordValid"></span>
 
             <label for="repeatSignUp">Password Repeat</label>
-            <input type="password" id="repeatSignUp" >
+            <input type="password" id="repeatSignUp">
+            <span class="repeatValid"></span>
+
 
             <button type="submit">Sign Up</button>
         </form>
@@ -50,10 +55,12 @@
         <form id="logInForm" class="hidden" action="">
 
             <label for="userMail">Mail</label>
-            <input type="email" id="userMail" >
+            <input type="email" id="userMail">
+            <span class="mailValid"></span>
 
             <label for="userPassword">Password</label>
-            <input type="text" id="userPassword" >
+            <input type="text" id="userPassword">
+            <span class="passwordValid"></span>
 
             <button type="submit">Log In</button>
         </form>
@@ -66,5 +73,6 @@
 
 
 <script type="application/javascript" src="/front/scripts/logInAndSignUp.js"></script>
+<script type="application/javascript" src="/front/scripts/inputsValidation.js"></script>
 </body>
 </html>

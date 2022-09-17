@@ -1,6 +1,6 @@
 .formContainer {
     width: 30%;
-    height: 60vh;
+    min-height: 60vh;
     margin-top: 45vh;
     transform: translateY(-50%);
     background: #2e2e2e;
@@ -12,8 +12,8 @@
 #signUpForm,
 #logInForm {
     width: calc(100% - 40px);
-    height: calc(100% - 40px);
-    padding: 20px;
+    min-height: calc(100% - 40px);
+    padding: 20px 20px 90px;
     display: flex;
     flex-direction: column;
 }
@@ -47,7 +47,8 @@
     cursor: pointer;
     transition-duration: 120ms;
 }
-.formTitle:hover { background: #b64300; }
+.formTitle:hover,
+.formTitle.active:hover{ background: #b64300; }
 .formTitle.active {
     background: #ff6600;
     color: #ffffff;
@@ -75,6 +76,9 @@ form > input:hover,
 form > input:focus {
     outline: none;
     border: 2px solid #ff6600;
+}
+form > span {
+    color: #ff6600;
 }
 #logInForm { align-items: flex-end; }
 #logInForm label { width: calc(50% + 5px); }
