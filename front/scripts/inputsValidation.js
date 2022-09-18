@@ -17,7 +17,7 @@ const mailRegEx = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
 
 mailInput.addEventListener("change", () => {
     if( mailRegEx.test(mailInput.value)) { mailErrorField.innerText = ""; }
-    if (!mailErrorField.innerText) { mailErrorField.innerText = "Not valid mail..."; }
+    else if (!mailErrorField.innerText) { mailErrorField.innerText = "Not valid mail..."; }
 })
 
 
@@ -28,7 +28,7 @@ const passwordRegEx = new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/);
 
 passwordInput.addEventListener("change", () => {
     if( passwordRegEx.test(passwordInput.value)) { passwordErrorField.innerText = ""; }
-    if (!passwordErrorField.innerText) { passwordErrorField.innerText = "Not valid mail..."; }
+    else if (!passwordErrorField.innerText) { passwordErrorField.innerText = "At least 8 symbols: 1 letter, 1 number"; }
 })
 
 
@@ -38,5 +38,5 @@ const repeatErrorField = document.querySelector("#signUpForm .repeatValid");
 
 repeatInput.addEventListener("change", () => {
     if( passwordInput.value === repeatInput.value) { repeatErrorField.innerText = ""; }
-    if (!repeatErrorField.innerText) { repeatErrorField.innerText = "Not valid mail..."; }
+    else if (!repeatErrorField.innerText) { repeatErrorField.innerText = "Passwords doesn't mach"; }
 })
