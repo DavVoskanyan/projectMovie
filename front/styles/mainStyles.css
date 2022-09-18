@@ -1,4 +1,12 @@
-* { font-family: 'Roboto', sans-serif; }
+* { font-family: 'Roboto', sans-serif;}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-button { display: none; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: #2e2e2ecc;
+}
 
 body {
     margin: 0;
