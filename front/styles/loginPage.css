@@ -102,3 +102,8 @@ form > button {
     transition-duration: 120ms;
 }
 form > button:hover { background: #b64300; }
+
+form > button[disabled] {
+    background: #b64300;
+    cursor: default;
+}

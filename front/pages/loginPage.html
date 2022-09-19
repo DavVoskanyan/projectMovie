@@ -26,43 +26,43 @@
     <div class="formContainer">
 
         <div class="signUpAndLogIn">
-            <span class="formTitle active">Sign Up</span>
-            <span class="formTitle">Log In</span>
+            <span class="formTitle active" id="signUpOpener">Sign Up</span>
+            <span class="formTitle" id="logInOpener">Log In</span>
         </div>
 
         <form id="signUpForm" action="">
 
             <label for="nameSignUp">Full Name</label>
-            <input type="text" id="nameSignUp">
+            <input type="text" name="name" id="nameSignUp">
             <span class="nameValid"></span>
 
             <label for="mailSignUp">Mail</label>
-            <input type="email" id="mailSignUp">
+            <input type="email" name="mail" id="mailSignUp">
             <span class="mailValid"></span>
 
             <label for="passwordSignUp">Password</label>
-            <input type="password" id="passwordSignUp">
+            <input type="password" name="password" id="passwordSignUp">
             <span class="passwordValid"></span>
 
             <label for="repeatSignUp">Password Repeat</label>
-            <input type="password" id="repeatSignUp">
+            <input type="password" name="repeatPassword" id="repeatSignUp">
             <span class="repeatValid"></span>
 
 
-            <button type="submit">Sign Up</button>
+            <button disabled type="submit">Sign Up</button>
         </form>
 
         <form id="logInForm" class="hidden" action="">
 
             <label for="userMail">Mail</label>
-            <input type="email" id="userMail">
+            <input type="email" name="mail" id="userMail">
             <span class="mailValid"></span>
 
             <label for="userPassword">Password</label>
-            <input type="password" id="userPassword">
+            <input type="password" name="password" id="userPassword">
             <span class="passwordValid"></span>
 
-            <button type="submit">Log In</button>
+            <button disabled type="submit">Log In</button>
         </form>
     </div>
 </div>
@@ -72,7 +72,7 @@
 
 
 
-<script type="application/javascript" src="/front/scripts/logInAndSignUp.js"></script>
-<script type="application/javascript" src="/front/scripts/inputsValidation.js"></script>
+<script type="module" src="/front/scripts/logInAndSignUp.js"></script>
+<script type="module" src="/front/scripts/inputsValidation.js"></script>
 </body>
 </html>
