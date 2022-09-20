@@ -1,3 +1,8 @@
+function regExpCheck(regExp) {
+    return (input) => regExp.test(input.value)
+}
+
+
 ////////////////////////////   E M P T Y   I N P U T   V A L I D A T I O N   //////////////////////////
 const allInputs = document.querySelectorAll("input");
 const allErrorFields = document.querySelectorAll("form span");
@@ -18,14 +23,11 @@ allInputs.forEach((input, index) => {
 const mailInput = document.querySelector("#signUpForm #mailSignUp");
 const mailErrorField = document.querySelector("#signUpForm .mailValid");
 const mailRegEx = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
-
-function regexInputCheck(input, regex) {
-    return regex.test(input.value);
-}
+const mailInputCheck = regExpCheck(mailRegEx);
 
 
 mailInput.addEventListener("change", () => {
-    if(regexInputCheck(mailInput, mailRegEx)) { mailErrorField.innerText = ""; }
+    if(mailInputCheck(mailInput)) { mailErrorField.innerText = ""; }
     else if (!mailErrorField.innerText) { mailErrorField.innerText = "Not valid mail..."; }
 })
 
@@ -34,9 +36,10 @@ mailInput.addEventListener("change", () => {
 const passwordInput = document.querySelector("#signUpForm #passwordSignUp");
 const passwordErrorField = document.querySelector("#signUpForm .passwordValid");
 const passwordRegEx = new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/);
+const passwordInputCheck = regExpCheck(passwordRegEx);
 
 passwordInput.addEventListener("change", () => {
-    if( regexInputCheck(passwordInput, passwordRegEx) ) { passwordErrorField.innerText = ""; }
+    if( passwordInputCheck(passwordInput) ) { passwordErrorField.innerText = ""; }
     else if (!passwordErrorField.innerText) { passwordErrorField.innerText = "At least 8 symbols: 1 letter, 1 number"; }
 })
 
@@ -68,8 +71,8 @@ function isFormValid() {
     const passwordInput = document.querySelector(`#signUpForm input[name='password']`);
     const repeatInput = document.querySelector(`#signUpForm input[name='repeatPassword']`);
 
-    if(mailInput && !regexInputCheck(mailInput, mailRegEx)) { return false; }
-    if(passwordInput && !regexInputCheck(passwordInput, passwordRegEx)) { return false; }
+    if(mailInput && !mailInputCheck(mailInput)) { return false; }
+    if(passwordInput && !passwordInputCheck(passwordInput)) { return false; }
     if(repeatInput && passwordInput && !isRepeatValid(passwordInput, repeatInput)) { return false; }
 
     return true;

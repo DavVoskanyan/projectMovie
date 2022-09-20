@@ -1,6 +1,5 @@
 import methods from '/front/scripts/inputsValidation.js';
-let isFormValid, inputIsNotEmpty;
-[isFormValid, inputIsNotEmpty] = methods;
+let [isFormValid, inputIsNotEmpty] = methods;
 
 //////////////////////////////   F O R M S   C H A N G E   B Y   C L I C K I N G   //////////////////////////
 const signUpButton = document.querySelectorAll(".formTitle").item(0);
@@ -20,6 +19,11 @@ logInButton.addEventListener("click", () => {
     logInForm.classList.remove("hidden");
     signUpForm.classList.add("hidden");
 })
+
+
+
+//////////////////////////////   S I G N - U P / L O G - I N   B U T T O N S  /////////////////////////
+/////////////////////////////////////   E N A B L E / D I S A B L E   /////////////////////////////////
 
 const allSignUpInputs = document.querySelectorAll("#signUpForm input");
 const signUpSubmit = document.querySelector("#signUpForm button")
@@ -42,3 +46,4 @@ allLogInInputs.forEach(input => {
         else { disableButton(logInSubmit); }
     })
 })
+

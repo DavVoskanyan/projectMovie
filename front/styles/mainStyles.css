@@ -30,23 +30,45 @@ header > img {
     position: absolute;
     left: 10px;
 }
-.menu {
+.steps {
     height: 100%;
     display: flex;
+    align-items: center;
 }
 .stepButton {
-    height: 100%;
-    padding: 0 25px;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
     color: #ffffff;
-    border-bottom: 0;
+    border: 2px solid #ff6600;
+    border-radius: 50%;
+    text-align: center;
     font-size: 20px;
-    line-height: 50px;
+    line-height: 40px;
+    text-decoration: none;
     cursor: pointer;
     transition-duration: 120ms;
 }
-.stepButton:first-child{ border-bottom: 3px solid #ff6600; }
-.stepButton:hover { border-bottom: 3px solid #ff6600; }
+.stepButton.done,
+.roadCircle.done {
+    background: #b74100;
+    border: 2px solid #b74100;
+    color: #b74100;
+}
+.stepButton.done:hover {
+    background: #ff6600;
+    border: 2px solid #ff6600;
+}
+.stepButton.current { background: #ff6600; }
+.stepButton.current:hover { background: #ff7c24; }
 
+.roadCircle {
+    width: 5px;
+    height: 5px;
+    margin: 0 5px;
+    border: 2px solid #ff6600;
+    border-radius: 50%;
+}
 
 
 
