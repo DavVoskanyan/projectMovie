@@ -13,8 +13,8 @@ function inputIsNotEmpty(input) {
 
 allInputs.forEach((input, index) => {
     input.addEventListener("input", () => {
-        if(inputIsNotEmpty(input)) { allErrorFields.item(index).innerHTML = "";  }
-        else { allErrorFields.item(index).innerHTML = "Field must not be empty..."; }
+        if(inputIsNotEmpty(input)) { allErrorFields.item(index).innerText = "";  }
+        else { allErrorFields.item(index).innerText = "Field must not be empty..."; }
     })
 } )
 
