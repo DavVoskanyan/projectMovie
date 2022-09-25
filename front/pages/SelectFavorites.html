@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Select Favorites</title>
     <link rel="stylesheet" href="/front/styles/mainStyles.css">
+    <link rel="stylesheet" href="/front/styles/selectFavorites.css">
 </head>
 <body>
 <header>
@@ -18,5 +19,23 @@
         <a class="stepButton">3</a>
     </div>
 </header>
+<div class="mainContent">
+    <label>
+        <input type="text" class="searchInput" placeholder="Movie name">
+        <img src="/front/assets/icons/search.png" alt="" class="searchIcon">
+    </label>
+    <div class="movieList">
+        <div class="movie" style="background-image: url(/front/assets/fightClub.jpg);">
+            <div class="textInfo">
+                <span class="ageRating">18+</span>
+                <span class="movieName">Fight Club(1999)</span>
+                <span class="movieRate">(4.7) ★★★★★</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="module" src="/front/scripts/movieListChang.js"></script>
 </body>
 </html>

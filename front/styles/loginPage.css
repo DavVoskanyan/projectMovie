@@ -58,7 +58,7 @@
 
 
 form > label {
-    margin-top: 10px;
+    margin-top: 7px;
     color: #ffffff;
     font-size: 15px;
     font-weight: 100;
@@ -67,19 +67,20 @@ form > input {
     width: calc(50% - 5px);
     height: 20px;
     padding-left: 5px;
-    background: #3e3e3e;
-    border: 2px solid #ffffff;
-    border-radius: 5px;
+    border: 0;
+    border-bottom: 1px solid #ff660044;
+    background: #2e2e2e;
     transition-duration: 200ms;
     color: #ffffff;
 }
 form > input:hover,
 form > input:focus {
     outline: none;
-    border: 2px solid #ff6600;
+    border-bottom: 1px solid #ff6600;
 }
 form > span {
     color: #ff6600;
+    font-size: 11px;
 }
 #logInForm { align-items: flex-end; }
 #logInForm label { width: calc(50% + 5px); }

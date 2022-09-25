@@ -81,10 +81,7 @@ div.mainContent {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("/front/assets/cinemaLogo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #212121;
 }
 footer {
     width: 100%;
