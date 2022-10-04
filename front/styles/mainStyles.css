@@ -1,11 +1,11 @@
 * { font-family: 'Roboto', sans-serif;}
 
-::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar { width: 7px; }
 ::-webkit-scrollbar-button { display: none; }
-::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-track { background: #212121; }
 ::-webkit-scrollbar-thumb {
-    border-radius: 3px;
-    background: #2e2e2ecc;
+    border-radius: 4px;
+    background: #4a4a4acc;
 }
 
 body {

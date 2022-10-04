@@ -13,10 +13,11 @@
 const movieList = document.querySelector("div.movieList");
 
 function createListAdder(list) {
-    return (movieName, movieAgeRating, movieYear, movieGrade) => {
+    return (movieId, movieName, movieAgeRating, movieYear, movieGrade) => {
         let newMovie = document.createElement("div");
         newMovie.classList.add("movie");
         newMovie.style.backgroundImage = `url(/front/assets/fightClub.jpg)`;
+        newMovie.setAttribute("dataMovieId", movieId.toString());
 
         let textContainer = document.createElement("div");
         textContainer.classList.add("textInfo");
@@ -27,7 +28,7 @@ function createListAdder(list) {
 
         let movieNameSpan = document.createElement("span");
         movieNameSpan.classList.add("movieName");
-        movieNameSpan.innerText = `${movieName}(${movieYear})`;
+        movieNameSpan.innerText = `${movieName} (${movieYear})`;
 
         let movieRateSpan = document.createElement("span");
         movieRateSpan.classList.add("movieRate");
