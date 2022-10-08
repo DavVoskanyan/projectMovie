@@ -72,16 +72,37 @@ label {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
+    position: relative;
     transition-duration: 250ms;
     cursor: pointer;
 }
-.textInfo:hover {
+.textInfo:hover,
+.textInfo.selected {
     opacity: 1;
 }
+.selectedIcon {
+    width: 50%;
+    padding: 15px;
+    aspect-ratio: 1/1;
+    border: 15px solid green;
+    border-radius: 50%;
+    display: none;
+    text-align: center;
+    color: green;
+    font-size: 800%;
+    font-weight: 700;
+    line-height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.selectedIcon.visible { display: block; }
 .movieName {
     color: #ffffff;
     font-size: 20px;
 }
+.movieName:hover { text-decoration: underline; }
 .movieRate {
     color: #ffdb00;
     font-size: 16px;

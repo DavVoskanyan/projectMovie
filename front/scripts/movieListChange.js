@@ -1,8 +1,11 @@
+import methods from '/front/scripts/selectFavoritesLogic.js';
+let [addOnMovieClickEvents, selectAllSelectedMovies] = methods;
 /////////////////  I N - H T M L   C O M P O N E N T   V I E W   //////////////////////
 
 // <div className="movie" style="background-image: url(imgURL);">
 //     <div className="textInfo">
 //          <span class="ageRating">ageRating</span>
+//          <span class="selectedIcon">✓</span>
 //         <span className="movieName">Name(Year)</span>
 //         <span className="movieRate">(grade) stars</span>
 //     </div>
@@ -26,6 +29,10 @@ function createListAdder(list) {
         movieAgeRatingSpan.classList.add("ageRating");
         movieAgeRatingSpan.innerText = `${movieAgeRating}+`;
 
+        let selectedIcon = document.createElement("span");
+        selectedIcon.classList.add("selectedIcon");
+        selectedIcon.innerText = "✓";
+
         let movieNameSpan = document.createElement("span");
         movieNameSpan.classList.add("movieName");
         movieNameSpan.innerText = `${movieName} (${movieYear})`;
@@ -39,6 +46,7 @@ function createListAdder(list) {
         movieRateSpan.innerText = rateText;
 
         textContainer.appendChild(movieAgeRatingSpan);
+        textContainer.appendChild(selectedIcon);
         textContainer.appendChild(movieNameSpan);
         textContainer.appendChild(movieRateSpan);
 
@@ -49,7 +57,13 @@ function createListAdder(list) {
 }
 
 const addMovie = createListAdder(movieList);
-
+addMovie(123, "Lord of Rings", 12, 2012, 4.5);
+addMovie(124, "Harry Potter", 12, 2010, 3.7);
+addMovie(125, "Lock, Stock and two smoking barrels", 18, 1998, 4.7);
+addMovie(126, "Gentlemen", 18, 2021, 5.0);
+addMovie(127, "Pulp Fiction", 18, 2002, 4.9);
+addOnMovieClickEvents();
+selectAllSelectedMovies();
 //////////////////////////////////////   C L E A R    M O V I E   L I S T   //////////////////////////////////////
 
 function createListCleaner(list) {

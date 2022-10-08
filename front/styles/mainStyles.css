@@ -53,7 +53,7 @@ header > img {
 .roadCircle.done {
     background: #b74100;
     border: 2px solid #b74100;
-    color: #b74100;
+    color: #ffffff;
 }
 .stepButton.done:hover {
     background: #ff6600;
